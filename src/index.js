@@ -24,7 +24,7 @@ const request = requestFactory({
   jar: true
 })
 
-const VENDOR = 'Semidao'
+const VENDOR = 'semidao'
 const baseUrl = 'https://agence-en-ligne.semidao.fr/wp/'
 const loginUrl = baseUrl + 'home.action'
 const billsUrl = baseUrl + 'displayBills.action'
