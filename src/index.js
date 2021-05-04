@@ -66,7 +66,6 @@ function authenticate(username, password) {
     .createHash('md5')
     .update(password)
     .digest('hex')
-  log('debug', hashPassword, 'hashed password')
   return this.signin({
     url: loginUrl,
     formSelector: 'form',
