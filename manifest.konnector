@@ -5,7 +5,7 @@
   "language": "node",
   "icon": "icon.png",
   "slug": "semidao",
-  "source": "git@github.com:konnectors/template.git",
+  "source": "git@github.com:konnectors/semidao.git",
   "editor": "Cozy",
   "vendor_link": "https://agence-en-ligne.semidao.fr/wp/home.action",
   "categories": ["energy"],
