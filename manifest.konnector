@@ -3,7 +3,7 @@
   "name": "Semidao",
   "type": "konnector",
   "language": "node",
-  "icon": "icon.png",
+  "icon": "semidao.svg",
   "slug": "semidao",
   "source": "git@github.com:konnectors/semidao.git",
   "editor": "Cozy",
