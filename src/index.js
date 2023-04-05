@@ -65,10 +65,7 @@ async function start(fields, cozyParameters) {
 // This shows authentication using the [signin function](https://github.com/konnectors/libs/blob/master/packages/cozy-konnector-libs/docs/api.md#module_signin)
 // even if this in another domain here, but it works as an example
 function authenticate(username, password) {
-  const hashPassword = crypto
-    .createHash('md5')
-    .update(password)
-    .digest('hex')
+  const hashPassword = crypto.createHash('md5').update(password).digest('hex')
   return this.signin({
     url: loginUrl,
     formSelector: 'form',
