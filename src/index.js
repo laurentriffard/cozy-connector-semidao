@@ -1,12 +1,13 @@
 process.env.SENTRY_DSN =
   process.env.SENTRY_DSN ||
-  'https://99cf991f9f38494ab091584850ffb59a@sentry.cozycloud.cc/149'
+  'https://7174302c2dd047ac98b1ab182f616f40@errors.cozycloud.cc/55'
 
 const {
   BaseKonnector,
   requestFactory,
   scrape,
   log,
+  cozyClient,
   utils
 } = require('cozy-konnector-libs')
 const crypto = require('crypto')
@@ -28,6 +29,8 @@ const VENDOR = 'semidao'
 const baseUrl = 'https://agence-en-ligne.semidao.fr/wp/'
 const loginUrl = baseUrl + 'home.action'
 const billsUrl = baseUrl + 'displayBills.action'
+const models = cozyClient.new.models
+const { Qualification } = models.document
 
 module.exports = new BaseKonnector(start)
 
@@ -155,7 +158,8 @@ function parseDocuments($) {
     filename: `${utils.formatDate(doc.date)}_${VENDOR}_${doc.amount}EUR${
       doc.vendorRef ? '_' + doc.vendorRef : ''
     }.pdf`,
-    vendor: VENDOR
+    vendor: VENDOR,
+    qualification: Qualification.getByLabel('water_invoice')
   }))
 }
 

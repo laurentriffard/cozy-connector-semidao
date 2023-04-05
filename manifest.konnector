@@ -88,6 +88,13 @@
       }
     }
   },
+  "qualification_labels": [
+    "water_invoice"
+  ],
+  "features": [
+    "DOC_QUALIFICATION_V2",
+    "SENTRY_V2"
+  ],
   "banksTransactionRegExp": "\\bsemidao\\b",
   "manifest_version": "2"
 }
