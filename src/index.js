@@ -156,7 +156,11 @@ function parseDocuments($) {
       doc.vendorRef ? '_' + doc.vendorRef : ''
     }.pdf`,
     vendor: VENDOR,
-    qualification: Qualification.getByLabel('water_invoice')
+    fileAttributes: {
+      metadata: {
+        qualification: Qualification.getByLabel('water_invoice')
+      }
+    }
   }))
 }
 
